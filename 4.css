@@ -1,0 +1,107 @@
+body{
+    margin:0;
+    padding: 0;
+    background: #262626;
+
+    margin: 0;
+    padding: 0;
+    background-color: #0c121f;
+    color: #fff;
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    font-family: "Montserrat", sans-serif;
+}
+
+img {
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%,-50%);
+    filter: grayscale(100%);
+    transition: .5s ease-in-out;
+}
+
+img:hover{
+    filter: grayscale(0%)
+}
+
+.img1{
+    width: 500px;
+    height: 700px;
+    border-radius: 16px;
+}
+
+.animated-text{
+    font-size: 36px;
+    font-weight: 600;
+    min-width: 350px;
+    padding-top: 800px;
+    padding-right: 370px;
+}
+
+.animated-text span{
+    position: relative;
+}
+
+.animated-text span::before{
+    content: "";
+    color: #fceb05;
+    animation: words 20s infinite;
+}
+
+.animated-text span::after{
+    content: "";
+    position: absolute;
+    width: calc(100% + 8px);
+    height: 100%;
+    background-color: #0c121f;
+    border-left: 2px solid #fceb05;
+    right: -8px;
+    animation: cursor .8s infinite, typing 20s steps(14) infinite;
+}
+
+@keyframes cursor {
+    to{
+        border-left: 2px solid #ff7f5000;
+    }
+}
+
+@keyframes words {
+    0%,20%{
+        content: "Gorgeous ...";
+    }
+    21%,40%{
+        content: "Amazing ...";
+    }
+    41%,60%{
+        content: "a Cutepie !!!";
+    }
+    61%,80%{
+        content: "Adorable ...";
+    }
+    81%,100%{
+        content: "Charming <3";
+    }   
+}
+
+@keyframes typing {
+    10%,15%,30%,35%,50%,55%,70%,75%,90%,95%{
+        width: 0;
+    }
+    5%,20%,25%,40%,45%,60%,65%,80%,85%{
+        width: calc(100% + 8px);
+    }
+}
+
+button{
+    width: 90px;
+    height: 50px;
+    border-radius: 16px;
+    background-color: blanchedalmond;
+    color: black;
+    
+
+
+}
